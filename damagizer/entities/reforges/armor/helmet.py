@@ -1,5 +1,5 @@
-from damagizer.entities.reforges.base_reforge import BaseReforge
+from damagizer.entities.reforges.armor.armor import ArmorReforge
 
 
-class HelmetReforge(BaseReforge):
+class HelmetReforge(ArmorReforge):
     pass
