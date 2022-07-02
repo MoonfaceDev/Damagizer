@@ -10,6 +10,7 @@ class SwordType(WeaponType):
 
 
 CLEAVER = SwordType(rarity=Rarity.UNCOMMON, damage=40, stats=Stats(strength=10))
+FLAMING_SWORD = SwordType(rarity=Rarity.UNCOMMON, damage=50, stats=Stats(strength=20))
 HYPERION = SwordType(rarity=Rarity.LEGENDARY, damage=260, stats=Stats(strength=150, intelligence=350, ferocity=30),
                      gemstone_slots={GemstoneSlot.SAPPHIRE, GemstoneSlot.COMBAT})
 # TODO: Add all sword types
