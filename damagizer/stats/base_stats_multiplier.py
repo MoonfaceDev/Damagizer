@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 
-from damagizer.entities.stats.stats import Stats
+from damagizer.profile.profile import Profile
 
 
 class BaseStatsMultiplier(ABC):
     @abstractmethod
-    def evaluate(self) -> float:
+    def evaluate(self, profile: Profile) -> float:
         raise NotImplementedError()
