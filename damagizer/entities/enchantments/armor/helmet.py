@@ -1,7 +1,7 @@
-from damagizer.entities.enchantments.armor.armor import ArmorEnchantment
-from damagizer.entities.enchantments.enchantment import Enchantment
+from damagizer.entities.enchantments.armor.armor import ArmorEnchantments
+from damagizer.entities.enchantments.enchantment_type import EnchantmentType
 
 
-class HelmetEnchantment(ArmorEnchantment):
-    BANE_OF_ARTHROPODS = Enchantment(max_level=7)
+class HelmetEnchantments(ArmorEnchantments):
+    bane_of_arthropods: EnchantmentType(max_level=7) = 0
     # TODO: Add all helmet-specific enchantments

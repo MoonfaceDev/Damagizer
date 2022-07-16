@@ -1,48 +1,50 @@
 from enum import Enum
 
-from damagizer.entities.enchantments.enchantment import Enchantment
+from pydantic import BaseModel
+
+from damagizer.entities.enchantments.enchantment_type import EnchantmentType
 
 
-class SwordEnchantment(Enum):
-    BANE_OF_ARTHROPODS = Enchantment(max_level=7)
-    CLEAVE = Enchantment(max_level=6)
-    CRITICAL = Enchantment(max_level=7)
-    CUBISM = Enchantment(max_level=6)
-    DRAGON_HUNTER = Enchantment()
-    ENDER_SLAYER = Enchantment(max_level=7)
-    EXECUTE = Enchantment(max_level=6)
-    EXPERIENCE = Enchantment(max_level=4)
-    FIRE_ASPECT = Enchantment(max_level=3)
-    FIRST_STRIKE = Enchantment()
-    GIANT_KILLER = Enchantment(max_level=7)
-    IMPALING = Enchantment(max_level=3)
-    KNOCKBACK = Enchantment(max_level=2)
-    LETHALITY = Enchantment(max_level=6)
-    LIFE_STEAL = Enchantment()
-    LOOTING = Enchantment()
-    LUCK = Enchantment(max_level=7)
-    MANA_STEAL = Enchantment(max_level=3)
-    PROSECUTE = Enchantment(max_level=6)
-    SCAVENGER = Enchantment()
-    SHARPNESS = Enchantment(max_level=7)
-    SMITE = Enchantment(max_level=7)
-    SMOLDERING = Enchantment()
-    SYPHON = Enchantment()
-    THUNDERBOLT = Enchantment(max_level=6)
-    THUNDERLORD = Enchantment(max_level=7)
-    TITAN_KILLER = Enchantment(max_level=7)
-    TRIPLE_STRIKE = Enchantment()
-    VAMPIRISM = Enchantment(max_level=6)
-    VENOMOUS = Enchantment(max_level=6)
-    VICIOUS = Enchantment(min_level=3)
+class SwordEnchantments(BaseModel):
+    bane_of_arthropods: EnchantmentType(max_level=7) = 0
+    cleave: EnchantmentType(max_level=6) = 0
+    critical: EnchantmentType(max_level=7) = 0
+    cubism: EnchantmentType(max_level=6) = 0
+    dragon_hunter: EnchantmentType() = 0
+    ender_slayer: EnchantmentType(max_level=7) = 0
+    execute: EnchantmentType(max_level=6) = 0
+    experience: EnchantmentType(max_level=4) = 0
+    fire_aspect: EnchantmentType(max_level=3) = 0
+    first_strike: EnchantmentType() = 0
+    giant_killer: EnchantmentType(max_level=7) = 0
+    impaling: EnchantmentType(max_level=3) = 0
+    knockback: EnchantmentType(max_level=2) = 0
+    lethality: EnchantmentType(max_level=6) = 0
+    life_steal: EnchantmentType() = 0
+    looting: EnchantmentType() = 0
+    luck: EnchantmentType(max_level=7) = 0
+    mana_steal: EnchantmentType(max_level=3) = 0
+    prosecute: EnchantmentType(max_level=6) = 0
+    scavenger: EnchantmentType() = 0
+    sharpness: EnchantmentType(max_level=7) = 0
+    smite: EnchantmentType(max_level=7) = 0
+    smoldering: EnchantmentType() = 0
+    syphon: EnchantmentType() = 0
+    thunderbolt: EnchantmentType(max_level=6) = 0
+    thunderlord: EnchantmentType(max_level=7) = 0
+    titan_killer: EnchantmentType(max_level=7) = 0
+    triple_strike: EnchantmentType() = 0
+    vampirism: EnchantmentType(max_level=6) = 0
+    venomous: EnchantmentType(max_level=6) = 0
+    vicious: EnchantmentType(min_level=3) = 0
 
 
 class SwordUltimateEnchantment(Enum):
-    CHIMERA = Enchantment()
-    COMBO = Enchantment()
-    INFERNO = Enchantment()
-    ONE_FOR_ALL = Enchantment(max_level=1)
-    SOUL_EATER = Enchantment()
-    SWARM = Enchantment()
-    ULTIMATE_JERRY = Enchantment()
-    ULTIMATE_WISE = Enchantment()
+    CHIMERA: EnchantmentType() = 0
+    COMBO: EnchantmentType() = 0
+    INFERNO: EnchantmentType() = 0
+    ONE_FOR_ALL: EnchantmentType(max_level=1) = 0
+    SOUL_EATER: EnchantmentType() = 0
+    SWARM: EnchantmentType() = 0
+    ULTIMATE_JERRY: EnchantmentType() = 0
+    ULTIMATE_WISE: EnchantmentType() = 0

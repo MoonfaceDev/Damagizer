@@ -1,11 +1,13 @@
 from enum import Enum
 
-from damagizer.entities.enchantments.enchantment import Enchantment
+from pydantic import BaseModel
+
+from damagizer.entities.enchantments.enchantment_type import EnchantmentType
 
 
-class BowEnchantment(Enum):
-    BANE_OF_ARTHROPODS = Enchantment(max_level=7)
+class BowEnchantments(BaseModel):
+    bane_of_arthropods: EnchantmentType(max_level=7) = 0
 
 
 class BowUltimateEnchantment(Enum):
-    CHIMERA = Enchantment()
+    CHIMERA: EnchantmentType()

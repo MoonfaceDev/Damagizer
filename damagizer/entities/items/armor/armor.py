@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 from damagizer.entities.attributes.armor import ArmorAttribute
-from damagizer.entities.enchantments.armor.armor import ArmorUltimateEnchantment, ArmorEnchantment
+from damagizer.entities.enchantments.armor.armor import ArmorUltimateEnchantment, ArmorEnchantments
 from damagizer.entities.gemstones.gemstone import Gemstone
 from damagizer.entities.reforges.base_reforge import BaseReforge
 from damagizer.entities.types.armor.armor import ArmorType
@@ -10,7 +10,7 @@ from damagizer.entities.types.armor.armor import ArmorType
 class Armor(BaseModel):
     type: ArmorType
     reforge: BaseReforge
-    enchantments: dict[ArmorEnchantment, int] = {}
+    enchantments: ArmorEnchantments = ArmorEnchantments()
     hot_potato_books: int = 0
     stars: int = 0
     recombobulated: bool = False

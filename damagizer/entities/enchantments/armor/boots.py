@@ -1,7 +1,7 @@
-from damagizer.entities.enchantments.armor.armor import ArmorEnchantment
-from damagizer.entities.enchantments.enchantment import Enchantment
+from damagizer.entities.enchantments.armor.armor import ArmorEnchantments
+from damagizer.entities.enchantments.enchantment_type import EnchantmentType
 
 
-class BootsEnchantment(ArmorEnchantment):
-    BANE_OF_ARTHROPODS = Enchantment(max_level=7)
+class BootsEnchantments(ArmorEnchantments):
+    bane_of_arthropods: EnchantmentType(max_level=7) = 0
     # TODO: Add all boots-specific enchantments

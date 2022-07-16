@@ -1,13 +1,16 @@
 from enum import Enum
 
-from damagizer.entities.enchantments.enchantment import Enchantment
+from pydantic import BaseModel
+
+from damagizer.entities.enchantments.enchantment_type import EnchantmentType
 
 
-class ArmorEnchantment(Enum):
-    BLAST_PROTECTION = Enchantment(max_level=7)
+class ArmorEnchantments(BaseModel):
+    protection: EnchantmentType(max_level=7) = 0
+    growth: EnchantmentType(max_level=7) = 0
     # TODO: Add all general armor enchantments
 
 
 class ArmorUltimateEnchantment(Enum):
-    CHIMERA = Enchantment()
+    CHIMERA: EnchantmentType()
     # TODO: Add all general armor ultimate enchants
