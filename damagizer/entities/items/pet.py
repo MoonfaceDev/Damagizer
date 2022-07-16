@@ -11,4 +11,4 @@ class Pet:
     item: PetItemType
 
     def get_stats(self) -> Stats:
-        return self.type.value.stats[self.rarity] * (self.level / 100) + self.item.value.stats
+        return self.type.stats[self.rarity] * (self.level / 100) + self.item.stats
