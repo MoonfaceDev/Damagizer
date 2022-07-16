@@ -54,12 +54,12 @@ class Profile(BaseModel):
             for k
             in range(1, 6)]) / 200
 
-    def get_dungeon_stats(self, normal_stats: Stats, dungeon_item: bool, stars: int):
-        if self.environment.dungeon and dungeon_item:
+    def get_dungeon_stats(self, normal_stats: Stats, stars: int):
+        if self.environment.dungeon:
             return normal_stats * (1 + self.get_catacombs_level_bonus() + stars / 10)
         return normal_stats
 
-    def get_dungeon_sword_damage(self, sword_damage: Stats, dungeon_item: bool, stars: int):
-        if self.environment.dungeon and dungeon_item:
+    def get_dungeon_sword_damage(self, sword_damage: Stats, stars: int):
+        if self.environment.dungeon:
             return sword_damage * (1 + self.get_catacombs_level_bonus() + stars / 10)
         return sword_damage
