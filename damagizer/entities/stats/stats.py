@@ -6,6 +6,7 @@ from pydantic import BaseModel
 class Stats(BaseModel):
     health: float = 0
     defense: float = 0
+    true_defense: float = 0
     strength: float = 0
     speed: float = 0
     crit_chance: float = 0

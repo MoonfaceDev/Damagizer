@@ -16,4 +16,5 @@ class Bow(Weapon):
     type: BowType
     reforge: BowReforge = BowReforge(stats=RarityStats())
     enchantments: dict[BowEnchantment, int] = {}
+    gemstones: set[Gemstone] = {}
     ultimate_enchantment: tuple[BowUltimateEnchantment | None, int] = (None, 0)
