@@ -6,6 +6,8 @@ from damagizer.entities.types.weapon import WeaponType
 
 class SwordType(WeaponType):
     attributable: bool = False
+    is_wood: bool = False
+    is_gold: bool = False
 
 
 WOOD_SWORD = SwordType(rarity=Rarity.COMMON, damage=20, stats=Stats())
